@@ -1,8 +1,8 @@
 'use strict';
 
-import _ from 'lodash';
-import request from 'superagent';
-import semantic from 'semantic';
+var _ = require('lodash'),
+  request = require('superagent'),
+  semantic = require('semantic');
 
 var
 

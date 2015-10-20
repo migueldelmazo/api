@@ -1,4 +1,4 @@
 #API
 
-This is a routing library to support reactWrapper project
+This is a client API Rest library to support reactWrapper project
 

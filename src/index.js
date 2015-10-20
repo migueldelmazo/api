@@ -2,7 +2,7 @@
 
 var _ = require('lodash'),
   request = require('superagent'),
-  semantic = require('semantic');
+  semantik = require('semantik');
 
 var
 
@@ -73,7 +73,7 @@ var
     if (_.isFunction(foo)) {
       result = runMethod(foo, options.ctx, options);
     } else if (_.isPlainObject(foo)) {
-      result = semantic.validate(data, foo);
+      result = semantik.validate(data, foo);
     }
     if (!result) {
       onKo(options, { errorCode });
@@ -85,7 +85,7 @@ var
     if (_.isFunction(foo)) {
       options[target] = runMethod(foo, options.ctx, options);
     } else if (_.isPlainObject(foo)) {
-      options[target] = semantic.parse(data, foo);
+      options[target] = semantik.parse(data, foo);
     } else {
       options[target] = _.cloneDeep(data);
     }
